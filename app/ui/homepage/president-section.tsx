@@ -1,15 +1,18 @@
+import Image from 'next/image';
+import President from '@/public/pres.jpg'
+
 export default function PresidentSection () {
   return (
     <div className="flex justify-center">
       <figure className="mx-4 w-3/12">
-        <img src="/"></img>
+        <Image src={President} width={500} height={700} alt="The President"/>
         <figcaption>
-          <h3>MD KAMRUL HASAN TARAFDER</h3>
+          <h3>MD ANDROKLES DAYTON KOVAČIĆ</h3>
           <h4>President and CEO February 21, 2023</h4>
         </figcaption>
       </figure>
       <div className="mx-4">
-        <h3>PRESIDENT&aposS MESSAGE</h3>
+        <h3>{`PRESIDENT'S MESSAGE`}</h3>
         <p>Dear colleagues,</p>
         <p>In the name of God, the most gracious and the most merciful!</p>
         <p>

@@ -6,14 +6,14 @@ export default function CommunitySection () {
       <h3>CLIENT COMMUNITY SERVICE PROGRAMS FOR THE POOR</h3>
       <div>
         <div className="flex">
-          <CommunityCard imageUrl="/" paragraphContent="ENVIRONMENT" />
-          <CommunityCard imageUrl="/" paragraphContent="HEALTH CARE" />
-          <CommunityCard imageUrl="/" paragraphContent="HOUSING" />
+          <CommunityCard imageUrl="/community1.jpg" paragraphContent="ENVIRONMENT" />
+          <CommunityCard imageUrl="/community2.jpg" paragraphContent="HEALTH CARE" />
+          <CommunityCard imageUrl="/community3.jpg" paragraphContent="HOUSING" />
         </div>
         <div className="flex">
-          <CommunityCard imageUrl="/" paragraphContent="EDUCATION" />
-          <CommunityCard imageUrl="/" paragraphContent="LIVELIHOOD" />
-          <CommunityCard imageUrl="/" paragraphContent="DISASTER RELIEF" />
+          <CommunityCard imageUrl="/community4.jpg" paragraphContent="EDUCATION" />
+          <CommunityCard imageUrl="/community5.jpg" paragraphContent="LIVELIHOOD" />
+          <CommunityCard imageUrl="/community6.jpg" paragraphContent="DISASTER RELIEF" />
         </div>
       </div>
     </div>
