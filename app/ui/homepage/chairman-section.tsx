@@ -9,7 +9,7 @@ export default function ChairmanSection () {
         </figcaption>
       </figure>
       <div className="mx-4">
-        <h3>CHAIRMAN EMERITUS'S MESSAGE</h3>
+        <h3>CHAIRMAN EMERITUS&aposS MESSAGE</h3>
         <p className="my-4">
           2022 is another banner year for us and I am thrilled to share with you the remarkable achievements of ASA Philippines. We continue our strong recovery post-lockdown and our services have now reached well over two million households nationwide. Thanks to your tireless efforts, we achieved record loan disbursements and income all the while offering the most competitive interest rates and comprehensive benefits in the industry. My heartfelt congratulations to you all for collectively achieving these record milestones! Please allow me to dedicate these achievements to my predecessor, our late founding Chairman Eddie Go, whose exceptional 17-year tenure, together with that of our co-founder and President Kamrul Tarafder, built a legacy that is at the core of what ASA Philippines is today. I would also like to thank Victoria Aquino Dee, one of our original incorporators, who steps down from our Board after 18 years of dedicated service. Thank you Viel, for your long-standing meritorious service and for being an integral part of the ASA success story.</p>
         <p className="my-4">
