@@ -9,7 +9,7 @@ export default function PresidentSection () {
         </figcaption>
       </figure>
       <div className="mx-4">
-        <h3>PRESIDENT'S MESSAGE</h3>
+        <h3>PRESIDENT&aposS MESSAGE</h3>
         <p>Dear colleagues,</p>
         <p>In the name of God, the most gracious and the most merciful!</p>
         <p>
