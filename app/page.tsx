@@ -14,18 +14,17 @@ import CopyrightSection from "./ui/homepage/copyright-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <nav>
+    <main className="flex min-h-screen flex-col items-center justify-between">
+      <nav className="flex justify-evenly">
         <NavBar />
-        <button className="sign-in-button rounded-full py-2 px-10 bg-orange-400">SIGN IN</button>
       </nav>
-      <section className="hero-section">
+      <section className="hero-section min-w-full min-h-screen flex justify-center">
         <HeroSection />
       </section>
-      <section className="overview-section">
+      <section className="overview-section min-w-full min-h-screen bg-blue-100 flex justify-center">
         <OverviewSection />
       </section>
-      <section className="awards-section w-full flex justify-center">
+      <section className="awards-section w-full flex justify-center bg-blue-400 text-white py-12">
         <AwardsSection />
       </section>
       <section className="president-message-section w-full felx justify-center">

@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import Chairman from '@/public/chair.jpg'
 
 export default function ChairmanSection () {
   return (
     <div className="flex justify-center">
       <figure className="mx-4 w-3/12">
-        <Image src={Chairman} width="500" height="700" alt="Photo of the Chairman" />
+        <Image src="/chairman.jpg" width="500" height="700" alt="Photo of the Chairman" />
         <figcaption>
           <h3>Howard Q. Dee</h3>
           <h4>Chairman Emeritus - 2023</h4>

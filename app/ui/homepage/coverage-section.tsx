@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import CoverageData from "./coverage-data";
 
 interface CoverageButtonProp {
@@ -23,8 +24,8 @@ export default function CoverageSection() {
         <CoverageButton location="MINDANAO" color="bg-orange-400  hover:bg-orange-600" />
       </div>
       <div className="flex">
-        <figure className="border-2 border-black border-solid">
-          <img src="/" alt="coverage" />
+        <figure>
+          <Image src="/philmap.png" width={488} height={655} alt="Philippine Map" />
         </figure>
         <div>
           <CoverageData />
