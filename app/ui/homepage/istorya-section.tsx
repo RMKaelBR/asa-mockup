@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function IstoryaSection () {
   return (
     <div>
@@ -14,8 +15,8 @@ export default function IstoryaSection () {
           </p>
           <p>Featured In</p>
           <div className="flex">
-            <img src="/" />
-            <img src="/" />
+            <Image src="/placeholder.jpg" width={200} height={300} alt="Placeholder Doggo"/>
+            <Image src="/placeholder.jpg" width={200} height={300} alt="Placeholder Doggo"/>
           </div>
         </div>
       </div>
