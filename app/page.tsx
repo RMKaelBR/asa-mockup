@@ -15,7 +15,7 @@ import CopyrightSection from "./ui/homepage/copyright-section";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <nav className="flex justify-evenly">
+      <nav className="flex justify-evenly z-50">
         <NavBar />
       </nav>
       <section className="hero-section min-w-full min-h-screen flex justify-center">
@@ -27,31 +27,31 @@ export default function Home() {
       <section className="awards-section w-full flex justify-center bg-blue-400 text-white py-12">
         <AwardsSection />
       </section>
-      <section className="president-message-section w-full felx justify-center">
+      <section className="president-message-section w-full flex justify-center pt-16 pb-20">
         <PresidentSection />
       </section>
-      <section className="chairman-message-section">
+      <section className="chairman-message-section flex justify-center bg-orange-100 pt-16 pb-20">
         <ChairmanSection />
       </section>
-      <section className="community-service-section">
+      <section className="community-service-section flex justify-center bg-blue-100 w-full py-16">
         <CommunitySection />
       </section>
       <section className="whats-new-section flex">
         <WhatsNewSection />
       </section>
-      <section className="istorya-section flex flex-col w-full items-center">
+      <section className="istorya-section flex flex-col w-full items-center bg-blue-100 py-32">
         <IstoryaSection />
       </section>
-      <section className="partners-section flex-col items-center">
+      <section className="partners-section flex-col items-center shadow-xl z-20">
         <PartnersSection />
       </section>
-      <section className="coverage-section">
+      <section className="w-screen flex justify-center coverage-section coverage-bg-styling z-10">
         <CoverageSection />
       </section>
-      <footer className="">
+      <footer className="footer-section w-screen bg-gray-800 text-white">
         <FooterSection />
       </footer>
-      <section className="copyright-section">
+      <section className="copyright-section w-screen flex justify-center bg-orange-400 py-2 font-bold">
         <CopyrightSection />
       </section>
     </main>

@@ -6,7 +6,7 @@ export default function NavBar() {
     <div className="flex justify-between w-11/12 items-center">
       <Link href="/">
         <Image src="/asa-logo.png" width={75} height={75} alt="ASA Logo"/></Link>
-      <ul className="flex list-none justify-around w-full">
+      <ul className="flex list-none justify-around w-full font-semibold">
         <li><Link href="/"><span>HOME</span></Link></li>
         <li><Link href="/"><span>ABOUT US</span></Link></li>
         <li><Link href="/"><span>REPORTS</span></Link></li>
