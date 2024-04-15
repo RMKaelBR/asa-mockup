@@ -16,7 +16,7 @@ export default function IstoryaSection () {
           <div className="text-left p-2">
             <p className="story-title text-lg font-bold my-4">Quotes from Istorya ni Nanay Video on Facebook</p>
             <h3 className="text-2xl font-extrabold">Name Here</h3>
-            <h4 className="text-md font-bold">ASA Philippines' Client</h4>
+            <h4 className="text-md font-bold">{`ASA Philippines' Client`}</h4>
           </div>
         </section>
         
