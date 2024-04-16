@@ -1,16 +1,16 @@
 import NavBar from "@/app/ui/navbar/navbar";
-import HeroSection from "./ui/homepage/hero-section";
-import OverviewSection from "./ui/homepage/overview-section";
-import CoverageSection from "./ui/homepage/coverage-section";
-import AwardsSection from "./ui/homepage/awards-section";
-import PresidentSection from "./ui/homepage/president-section";
-import ChairmanSection from "./ui/homepage/chairman-section";
-import CommunitySection from "./ui/homepage/community-section";
-import WhatsNewSection from "./ui/homepage/whatsnew-section";
-import IstoryaSection from "./ui/homepage/istorya-section";
-import PartnersSection from "./ui/homepage/partners-section";
-import FooterSection from "./ui/homepage/footer-section";
-import CopyrightSection from "./ui/homepage/copyright-section";
+import HeroSection from "./ui/homepage/1_HeroSection";
+import OverviewSection from "./ui/homepage/2_OverviewSection";
+import CoverageSection from "./ui/homepage/11_CoverageSection";
+import AwardsSection from "./ui/homepage/3_AwardsSection";
+import PresidentSection from "./ui/homepage/4_PresidentsSection";
+import ChairmanSection from "./ui/homepage/5_ChairmansSection";
+import CommunitySection from "./ui/homepage/6_CommunitySection";
+import WhatsNewSection from "./ui/homepage/7_WhatsNewSection";
+import IstoryaSection from "./ui/homepage/8_IstoryaSection";
+import PartnersSection from "./ui/homepage/10_PartnersSection";
+import FooterSection from "./ui/homepage/12_FooterSection";
+import CopyrightSection from "./ui/homepage/13_CopyrightSection";
 
 export default function Home() {
   return (

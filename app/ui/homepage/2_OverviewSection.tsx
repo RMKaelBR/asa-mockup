@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import OverviewCards from "./overview-cards";
+import OverviewCards from "./2_OverviewCards";
 interface OverviewReportProps {
   imageUrl: string;
 }

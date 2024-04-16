@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function HeroSection () {
   return (
     <div className="flex flex-col justify-center items-center w-full bg-opacity-50">
