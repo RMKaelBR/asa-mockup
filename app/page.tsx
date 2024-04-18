@@ -36,12 +36,12 @@ export default function Home() {
         <IstoryaSection /></section>
       <section className="partners-section flex flex-col w-full items-center shadow-xl z-20">
         <PartnersSection /></section>
-      {/* <section className="w-screen flex justify-center coverage-section coverage-bg-styling z-10">
+      <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10">
         <CoverageSection /></section>
-      <footer className="footer-section w-screen bg-gray-800 text-white">
+      <footer className="footer-section w-full bg-gray-800 text-white">
         <FooterSection /></footer>
-      <section className="copyright-section w-screen flex justify-center bg-orange-400 py-2 font-bold">
-        <CopyrightSection /></section> */}
+      <section className="copyright-section w-full flex justify-center bg-orange-400 py-2 font-bold">
+        <CopyrightSection /></section>
     </main>
   );
 }

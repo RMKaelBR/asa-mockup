@@ -12,7 +12,7 @@ export default function PresidentSection () {
       </figure>
       <div className="mx-4 w-8/12">
         <div>
-          <h3 className="text-3xl font-extrabold text-gray-700">{`PRESIDENT'S MESSAGE`}</h3>
+          <h3 className="text-3xl font-extrabold text-gray-700 text-red-400 sm:text-orange-400 md:text-yellow-400 lg:text-green-400 xl:text-blue-400 2xl:text-violet-400">{`PRESIDENT'S MESSAGE`}</h3>
           <p className="text-lg mt-4">Dear colleagues,</p>
           <p className="text-lg">In the name of God, the most gracious and the most merciful!</p>
           <p className="text-lg mt-4">
