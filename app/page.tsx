@@ -1,16 +1,16 @@
 import NavBar from "@/app/ui/navbar/navbar";
-import HeroSection from "./ui/homepage/hero-section";
-import OverviewSection from "./ui/homepage/overview-section";
-import CoverageSection from "./ui/homepage/coverage-section";
-import AwardsSection from "./ui/homepage/awards-section";
-import PresidentSection from "./ui/homepage/president-section";
-import ChairmanSection from "./ui/homepage/chairman-section";
-import CommunitySection from "./ui/homepage/community-section";
-import WhatsNewSection from "./ui/homepage/whatsnew-section";
-import IstoryaSection from "./ui/homepage/istorya-section";
-import PartnersSection from "./ui/homepage/partners-section";
-import FooterSection from "./ui/homepage/footer-section";
-import CopyrightSection from "./ui/homepage/copyright-section";
+import HeroSection from "./ui/homepage/1_HeroSection";
+import OverviewSection from "./ui/homepage/2_OverviewSection";
+import CoverageSection from "./ui/homepage/11_CoverageSection";
+import AwardsSection from "./ui/homepage/3_AwardsSection";
+import PresidentSection from "./ui/homepage/4_PresidentsSection";
+import ChairmanSection from "./ui/homepage/5_ChairmansSection";
+import CommunitySection from "./ui/homepage/6_CommunitySection";
+import WhatsNewSection from "./ui/homepage/7_WhatsNewSection";
+import IstoryaSection from "./ui/homepage/8_IstoryaSection";
+import PartnersSection from "./ui/homepage/10_PartnersSection";
+import FooterSection from "./ui/homepage/12_FooterSection";
+import CopyrightSection from "./ui/homepage/13_CopyrightSection";
 
 export default function Home() {
   return (
@@ -19,41 +19,29 @@ export default function Home() {
         <NavBar />
       </nav>
       <section className="hero-section min-w-full min-h-screen flex justify-center">
-        <HeroSection />
-      </section>
+        <HeroSection /></section>
       <section className="overview-section min-w-full min-h-screen bg-blue-100 flex justify-center">
-        <OverviewSection />
-      </section>
+        <OverviewSection /></section>
       <section className="awards-section w-full flex justify-center bg-blue-400 text-white py-12">
-        <AwardsSection />
-      </section>
+        <AwardsSection /></section>
       <section className="president-message-section w-full flex justify-center pt-16 pb-20">
-        <PresidentSection />
-      </section>
+        <PresidentSection /></section>
       <section className="chairman-message-section flex justify-center bg-orange-100 pt-16 pb-20">
-        <ChairmanSection />
-      </section>
+        <ChairmanSection /></section>
       <section className="community-service-section flex justify-center bg-blue-100 w-full py-16">
-        <CommunitySection />
-      </section>
+        <CommunitySection /></section>
       <section className="whats-new-section flex">
-        <WhatsNewSection />
-      </section>
+        <WhatsNewSection /></section>
       <section className="istorya-section flex flex-col w-full items-center bg-blue-100 py-32">
-        <IstoryaSection />
-      </section>
-      <section className="partners-section flex-col items-center shadow-xl z-20">
-        <PartnersSection />
-      </section>
-      <section className="w-screen flex justify-center coverage-section coverage-bg-styling z-10">
-        <CoverageSection />
-      </section>
+        <IstoryaSection /></section>
+      <section className="partners-section flex flex-col w-full items-center shadow-xl z-20">
+        <PartnersSection /></section>
+      {/* <section className="w-screen flex justify-center coverage-section coverage-bg-styling z-10">
+        <CoverageSection /></section>
       <footer className="footer-section w-screen bg-gray-800 text-white">
-        <FooterSection />
-      </footer>
+        <FooterSection /></footer>
       <section className="copyright-section w-screen flex justify-center bg-orange-400 py-2 font-bold">
-        <CopyrightSection />
-      </section>
+        <CopyrightSection /></section> */}
     </main>
   );
 }
