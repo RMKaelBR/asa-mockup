@@ -12,14 +12,33 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.navigation-links > li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
 .coverage-bg-styling {
   background: linear-gradient(to top, #BEE3F8, #FFFFFF);
 }
 
 .hero-section {
+  position: relative;
+  
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: auto; */
+  width: 100%;
+  height: 100%;
   background-image: url("../public/herobackg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .community-card > div {
