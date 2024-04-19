@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CoverageData from "./11_CoverageData";
+import CoverageData from "./10_CoverageData";
 
 interface CoverageButtonProp {
   location: string;

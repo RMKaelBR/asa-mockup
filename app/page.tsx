@@ -1,16 +1,16 @@
 import NavBar from "@/app/ui/navbar/navbar";
 import HeroSection from "./ui/homepage/1_HeroSection";
 import OverviewSection from "./ui/homepage/2_OverviewSection";
-import CoverageSection from "./ui/homepage/11_CoverageSection";
+import CoverageSection from "./ui/homepage/10_CoverageSection";
 import AwardsSection from "./ui/homepage/3_AwardsSection";
 import PresidentSection from "./ui/homepage/4_PresidentsSection";
 import ChairmanSection from "./ui/homepage/5_ChairmansSection";
 import CommunitySection from "./ui/homepage/6_CommunitySection";
 import WhatsNewSection from "./ui/homepage/7_WhatsNewSection";
 import IstoryaSection from "./ui/homepage/8_IstoryaSection";
-import PartnersSection from "./ui/homepage/10_PartnersSection";
-import FooterSection from "./ui/homepage/12_FooterSection";
-import CopyrightSection from "./ui/homepage/13_CopyrightSection";
+import PartnersSection from "./ui/homepage/9_PartnersSection";
+import FooterSection from "./ui/homepage/11_FooterSection";
+import CopyrightSection from "./ui/homepage/12_CopyrightSection";
 
 export default function Home() {
   return (

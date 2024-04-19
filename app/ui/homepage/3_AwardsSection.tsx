@@ -1,12 +1,5 @@
 import Image from 'next/image';
 
-
-function Checkmark() {
-  return (
-    <span className="text-blue-200 text-4xl"><i className="text-blue-200 text-4xl fa-solid fa-circle-check" /></span>
-  )
-}
-
 function AwardItem({awardName=''}) {
   return (
     <li className="flex items-center border-b border-solid py-2 md:py-4">
@@ -19,8 +12,8 @@ function AwardItem({awardName=''}) {
 export default function AwardsSection () {
   return (
     <div className="flex justify-evenly items-center 2xl:w-10/12">
-      <div className="w-min md:w-max mr-4">
-        <h3 className="text-center md:text-left text-3xl font-extrabold">GAWAD MFI 2016</h3>
+      <div className="w-52 sm:w-80 md:w-max mr-4">
+        <h3 className="text-center text-3xl font-extrabold md:text-left">GAWAD MFI 2016</h3>
         <ul className="flex flex-col justify-evenly h-full">
           <AwardItem awardName='OUTSTANDING MICROFINANCE INSTITUTION' />
           <AwardItem awardName='BEST MFI INTERMEDIARY' />
