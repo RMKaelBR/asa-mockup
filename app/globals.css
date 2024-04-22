@@ -41,8 +41,16 @@ nav {
   z-index: -1;
 }
 
+.community-service-section {
+  background: linear-gradient(to bottom, rgba(212, 242, 255, 1), transparent);
+}
+
 .community-card > div {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.logos-container > svg {
+  margin: 0.5em;
 }
 
 .footer-subheading {
