@@ -36,8 +36,7 @@ export default function Home() {
         <IstoryaSection /></section>
       <section className="partners-section flex flex-col w-full items-center shadow-xl z-20">
         <PartnersSection /></section>
-      <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10
-      text-red-400 sm:text-orange-400 md:text-yellow-400 lg:text-green-400 xl:text-blue-400 2xl:text-violet-400">
+      <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10">
         <CoverageSection /></section>
       <footer className="footer-section w-full bg-gray-800 text-white">
         <FooterSection /></footer>
