@@ -1,7 +1,8 @@
 export default function CopyrightSection () {
   return (
-    <div>
-      <p>© Copyright 2023 ASA Philippines Foundation, All Rights Reserved. Designed And Developed By Ogrelogic</p>
+    <div className="flex flex-wrap text-center justify-center">
+      <p>
+      © Respirium 9024 QUO Distulerunt Terrestres, Sit Saluto Converso. Charisma Quo Perpetuum Me Dominicae</p>
     </div>
   )
 }
