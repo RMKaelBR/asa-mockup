@@ -1,13 +1,24 @@
 import Image from 'next/image';
 import CoverageData from "./10_CoverageData";
 
-interface CoverageButtonProp {
-  location: string;
-  color: string;
+const CoverageMap = () => {
+  return (
+    <div className="flex lg:flex-col md:w-7/12 lg:w-1/2 items-center lg:px-16">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center w-min">
+        <CoverageButton location="LUZON I" color="bg-blue-400 hover:bg-blue-600" />
+        <CoverageButton location="LUZON II"  color="bg-blue-200  hover:bg-blue-400" />
+        <CoverageButton location="VISAYAS" color="bg-yellow-400  hover:bg-yellow-600" />
+        <CoverageButton location="MINDANAO" color="bg-orange-400  hover:bg-orange-600" />
+      </div>
+      <figure className="w-2/3">
+        <Image src="/philmap.png" width={488} height={655} alt="Philippine Map" />
+      </figure>
+    </div>
+  )
 }
 
-function CoverageButton({ location, color }: CoverageButtonProp) {
-  const otherStyles = "rounded-full px-4 py-1 mx-6 font-bold text-gray-700"
+function CoverageButton({ location="", color="" }) {
+  const otherStyles = "rounded-full px-4 py-1 mx-2 xl:mx-6 my-2 font-bold text-gray-700 min-w-max"
   const tailwindStyles = `${color} ${otherStyles}`;
   return (
     <button className={tailwindStyles}>{location}</button>
@@ -16,21 +27,9 @@ function CoverageButton({ location, color }: CoverageButtonProp) {
 
 export default function CoverageSection() {
   return (
-    <div className="w-10/12 flex py-16 justify-center">
-      <div className="flex flex-col items-center px-16">
-        <div>
-          <CoverageButton location="LUZON I" color="bg-blue-400 hover:bg-blue-600" />
-          <CoverageButton location="LUZON II"  color="bg-blue-200  hover:bg-blue-400" />
-          <CoverageButton location="VISAYAS" color="bg-yellow-400  hover:bg-yellow-600" />
-          <CoverageButton location="MINDANAO" color="bg-orange-400  hover:bg-orange-600" />
-        </div>
-        <figure>
-          <Image src="/philmap.png" width={488} height={655} alt="Philippine Map" />
-        </figure>
-      </div>
-      <div className="flex w-max self-center bg-white shadow-md p-8">
-        <CoverageData />
-      </div>
+    <div className="w-full xl:w-11/12 flex flex-col lg:flex-row py-16 items-center justify-center">
+      <CoverageMap />
+      <CoverageData />
     </div>
   )
 }

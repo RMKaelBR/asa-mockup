@@ -32,11 +32,12 @@ export default function Home() {
         <CommunitySection /></section>
       <section className="whats-new-section flex">
         <WhatsNewSection /></section>
-      <section className="istorya-section flex flex-col w-full items-center bg-blue-100 py-32">
+      <section className="istorya-section flex flex-col w-full items-center">
         <IstoryaSection /></section>
       <section className="partners-section flex flex-col w-full items-center shadow-xl z-20">
         <PartnersSection /></section>
-      <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10">
+      <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10
+      text-red-400 sm:text-orange-400 md:text-yellow-400 lg:text-green-400 xl:text-blue-400 2xl:text-violet-400">
         <CoverageSection /></section>
       <footer className="footer-section w-full bg-gray-800 text-white">
         <FooterSection /></footer>

@@ -26,7 +26,7 @@ export default function FooterSection () {
           <h3 className="footer-subheading">GET IN TOUCH</h3>
           <ul className="footer-ul">
             <li><p className="infoLine">
-                We would be happy to discuss your needs as well as answer any questions you may have. We can be reached at:</p></li>
+              We would be happy to discuss your needs as well as answer any questions you may have. We can be reached at:</p></li>
             <li><p className="infoLine"><i className="fa-solid fa-phone" />
               +632-8687-7558</p></li>
             <li><p className="infoLine"><i className="fa-solid fa-phone" />

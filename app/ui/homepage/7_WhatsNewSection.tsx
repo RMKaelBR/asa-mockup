@@ -12,7 +12,7 @@ function WhatsNewCard({ imgUrl, heading, previewContent }: WhatsNewCardProps) {
       <div className="flex flex-col">
         <Image src={imgUrl} width={500} height={300} alt="Title Photo" className="rounded-t-xl shadow-lg"/>
         <div className="p-4">
-          <p className="font-extrabold text-xl xl:text-2xl text-gray-700 text-red-400 sm:text-orange-400 md:text-yellow-400 lg:text-green-400 xl:text-blue-400 2xl:text-violet-400">
+          <p className="font-extrabold text-xl xl:text-2xl text-gray-700">
             {heading}</p>
           <p className="mt-4 text-lg lg:text-md">{previewContent}</p>
           <button className="rounded-full py-2 px-4 bg-blue-400 mt-8 text-white font-medium">
