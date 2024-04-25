@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const SwiperContent = () => {
   return (
-    <section className="swiper-content w-80 h-full flex flex-col items-center mx-10 bg-white rounded-xl shadow-lg py-2 lg:mr-20">
+    <section className="istorya-swiper w-80 h-full flex flex-col items-center mx-10 bg-white rounded-xl shadow-lg py-2 lg:mr-20">
       <div className="flex justify-center items-center bg-white relative">
         <button className="rounded-full p-1 px-3 bg-blue-400 text-white absolute -bottom-2 left-0">&lt;</button>
         <div className="the-swiper">
