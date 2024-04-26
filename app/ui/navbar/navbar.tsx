@@ -15,6 +15,7 @@ const SignInButton = ({visibilityConditions}: SignInButtonProps) => {
 }
 
 const DropdownMenu = () => {
+
   const DropdownListItem = ({addressUrl = '', itemTitle = ''}) => {
     return (
       <li className="hover:text-orange-500 my-1"><Link href={addressUrl}><span>{itemTitle}</span></Link></li>
@@ -45,7 +46,11 @@ export default function NavBar() {
   const toggleDropdown = () => {
     setnavBarIsOpen(!navBarIsOpen);
   };
-
+  const NavigationBarLink = ({addressUrl='', itemTitle=''}) => {
+    return (
+      <li className="hover:text-orange-500"><Link href={addressUrl}><span>{itemTitle}</span></Link></li>
+    )
+  }
   return (
     <div className="w-full flex flex-col items-center">
       <div className="flex justify-between w-11/12 items-center">
@@ -53,16 +58,16 @@ export default function NavBar() {
           <Image src="/asa-logo.png" width={75} height={75} alt="ASA Logo"/></Link>
         <div className="hidden lg:flex w-full justify-around font-medium">
           <ul className="navigation-links flex justify-around list-none w-full">
-            <li><Link href="/"><span>HOME</span></Link></li>
-            <li><Link href="/"><span>ABOUT US</span></Link></li>
-            <li><Link href="/"><span>REPORTS</span></Link></li>
-            <li><Link href="/"><span>CSS PROGRAMS</span></Link></li>
-            <li><Link href="/"><span>CLIENTS</span></Link></li>
-            <li><Link href="/"><span>NEWS & EVENTS</span></Link></li>
-            <li><Link href="/"><span>GOVERNANCE</span></Link></li>
-            <li><Link href="/"><span>JOIN US NOW!</span></Link></li>
-            <li><Link href="/"><span>CONTACT US</span></Link></li>
-            <li><Link href="/"><span>PRIVACY NOTICE</span></Link></li></ul>
+          <NavigationBarLink addressUrl="/" itemTitle="HOME" />
+          <NavigationBarLink addressUrl="/" itemTitle="ABOUT US" />
+          <NavigationBarLink addressUrl="/" itemTitle="REPORTS" />
+          <NavigationBarLink addressUrl="/" itemTitle="CSS PROGRAMS" />
+          <NavigationBarLink addressUrl="/" itemTitle="CLIENTS" />
+          <NavigationBarLink addressUrl="/" itemTitle="NEWS & EVENTS" />
+          <NavigationBarLink addressUrl="/" itemTitle="GOVERNANCE" />
+          <NavigationBarLink addressUrl="/" itemTitle="JOIN US NOW!" />
+          <NavigationBarLink addressUrl="/" itemTitle="CONTACT US" />
+          <NavigationBarLink addressUrl="/" itemTitle="PRIVACY NOTICE" /></ul>
         </div>
         <SignInButton visibilityConditions='hidden lg:block'/>
         <button onClick={toggleDropdown} className="lg:hidden"><i className="fa-solid fa-bars text-3xl hover:text-orange-600" /></button>
