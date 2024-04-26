@@ -12,6 +12,10 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* section {
+  border: 1px solid red;
+} */
+
 .navigation-links > li {
   display: flex;
   align-items: center;
@@ -49,12 +53,64 @@ nav {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
 }
 
-.swiper-content > .flex {
+/* .swiper-content > .flex {
   overflow: hidden;
 }
 
 .swiper-content > .flex > * {
   flex: 1 0 auto;
+  scroll-snap-align: center;
+} */
+
+.swiper-content {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+@media (min-width: 640px) {
+  .swiper-content {
+    grid-auto-columns: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-content {
+    grid-auto-columns: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-content {
+    grid-auto-columns: 33%;
+  }
+}
+
+/* @media (min-width: 1280px) {
+  .swiper-content {
+    grid-auto-columns: 45%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .swiper-content {
+    grid-auto-columns: 35%;
+  }
+} */
+
+.swiper-content::-webkit-scrollbar {
+  display:none;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 0.5rem;
+}
+
+.snaps-inline > * {
   scroll-snap-align: center;
 }
 
