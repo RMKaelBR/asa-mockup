@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const CommunityCard = ({imageUrl="", paragraphContent=""}) => {
   return (
-    <article className="community-card w-max md:w-5/12 xl:w-4/12 max-w-max m-4 relative">
+    <article className="community-card w-11/12 md:w-5/12 xl:w-4/12 max-w-max m-4 relative">
       <Image src={imageUrl} width={430} height={250} alt={paragraphContent} className="rounded-xl"/>
       <div className="absolute top-0 left-0 w-full flex justify-center items-center min-w-full min-h-full">
         <p className="text-white font-extrabold text-2xl">{paragraphContent}</p>

@@ -5,7 +5,7 @@ import OverviewCards from "./2_OverviewCards";
 
 const  OverviewReport = ({imageUrl=''}) => {
   return (
-    <div className="overview-report flex flex-col items-center m-2 sm:m-4">
+    <div className="overview-report flex flex-col items-center m-1 sm:m-4">
       <Image src={imageUrl} width={320} height={450} alt="report" className="rounded-xl" />
       <button className="rounded-full px-4 md:px-8 py-2 md:py-3 bg-orange-500 text-sm md:text-base text-white my-6">VIEW</button>
     </div>
@@ -29,13 +29,13 @@ const SwiperContent = () => {
       return () => container.removeEventListener('scroll', handleScroll);
     }
   }, []);
-
+  
   return (
     <section className="w-10/12 xl: w-11/12 2xl:w-3/4">
       <div className="flex items-center">
         <button onClick={() => handleScroll(containerRef, 'left')} 
                 disabled={!isScrollableLeft} 
-                className={`text-5xl md:text-6xl text-orange-500 ${!isScrollableLeft && 'opacity-30'}`}>
+                className={`text-3xl md:text-6xl text-orange-500 ${!isScrollableLeft && 'opacity-30'}`}>
           &lt;</button>
         <div ref={containerRef} className="swiper-content snaps-inline">
           <OverviewReport imageUrl="/report1.jpg" />
@@ -46,7 +46,7 @@ const SwiperContent = () => {
         </div>
         <button onClick={() => handleScroll(containerRef, 'right')} 
                 disabled={!isScrollableRight} 
-                className={`text-5xl md:text-6xl text-orange-500 ${!isScrollableRight && 'opacity-30'}`}>
+                className={`text-3xl md:text-6xl text-orange-500 ${!isScrollableRight && 'opacity-30'}`}>
           &gt;</button>
       </div>
     </section>
