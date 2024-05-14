@@ -15,7 +15,7 @@ import CopyrightSection from "./ui/homepage/12_CopyrightSection";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <nav className="flex justify-evenly z-50">
+      <nav className="z-50">
         <NavBar /></nav>
       <section className="hero-section min-w-full min-h-screen flex justify-center">
         <HeroSection /></section>

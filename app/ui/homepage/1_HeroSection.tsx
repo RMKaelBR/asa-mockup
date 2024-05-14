@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function HeroSection () {
   return (
     <div className="flex flex-col justify-center items-center w-full bg-opacity-50">
@@ -13,7 +15,7 @@ export default function HeroSection () {
         </h1>
         <p className="text-lg text-center mb-4 sm:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-1/2">
           ASA Philippines is a non-profit, non-stock corporation specializing in microfinance. The Foundation caters to more than 2 million clients who are called Micro Entrepreneurs.</p>
-        <button className="sign-in-button rounded-full py-2 px-10 bg-blue-400">ABOUT US</button>
+        <Link href="/about/who-we-are"><button className="sign-in-button rounded-full py-2 px-10 bg-blue-400">ABOUT US</button></Link>
       </div>
     </div>
   )
