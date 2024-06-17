@@ -15,11 +15,13 @@ export default function LoginPage() {
     try{
       const response = await fetch('http://localhost:3000/auth/signin', {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
-    })
+      credentials: 'include',
+      })
       if (response.ok) {
-        router.push('/profile')
+        console.log(`yo, response was good.`);
+        console.log(response);
       }
       else {
         console.log(`Response wasn't okay. ;`)
@@ -29,19 +31,15 @@ export default function LoginPage() {
     } catch (error) {
       console.log("what was that?", error)
     }
-
-    // if (response.ok) {
-    //   router.push('/profile')
-    // } else {
-    //   // Handle errors here? I don't know what to yet.
-    // }
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input className="m-4 p-2 border-2 border-gray-300" type="email" name="email" placeholder="Email here" required />
-      <input className="m-4 p-2 border-2 border-gray-300" type="password" name="password" placeholder="Password here" autoComplete='true'required />
-      <button className="m-4 p-2 rounded-lg bg-blue-100 hover:bg-blue-200" type="submit">Login</button>
-    </form>
+    <div className="w-min">
+      <form onSubmit={handleSubmit} className='flex flex-col items-center'>
+        <input className="m-4 p-2 border-2 border-gray-300" type="email" name="email" placeholder="Email here" required />
+        <input className="m-4 p-2 border-2 border-gray-300" type="password" name="password" placeholder="Password here" autoComplete='true'required />
+        <button className="m-4 p-2 rounded-lg bg-blue-100 hover:bg-blue-200" type="submit">Login</button>
+      </form>
+    </div>
   )
 }

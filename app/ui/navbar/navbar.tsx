@@ -69,7 +69,7 @@ export default function NavBar() {
           <NavigationBarLink addressUrl="/" itemTitle="CONTACT US" />
           <NavigationBarLink addressUrl="/" itemTitle="PRIVACY NOTICE" /></ul>
         </div>
-        <Link href=""><SignInButton visibilityConditions='hidden lg:block'/></Link>
+        <Link href="/auth/login"><SignInButton visibilityConditions='hidden lg:block'/></Link>
         <button onClick={toggleDropdown} className="lg:hidden"><i className="fa-solid fa-bars text-3xl hover:text-orange-600" /></button>
       </div>
       {navBarIsOpen && <DropdownMenu />}

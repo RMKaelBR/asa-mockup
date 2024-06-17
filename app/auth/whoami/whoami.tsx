@@ -1,21 +1,22 @@
 'use client'
 import { FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function WhoAmIPage() {
-  const router = useRouter()
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    const formData = new FormData(event.currentTarget);
-
     try{
-      const response = await fetch('http://localhost:3000/auth/1', {
-      method: 'GET'
+      const response = await fetch('http://localhost:3000/auth/whoami', {
+      method: 'GET',
+      credentials: 'include'
     })
       if (response.ok) {
-        router.push('/profile')
+        console.log(`yo, response was good.`);
+        console.log(response);
+        console.log(response.body);
+        const userData = await response.json();
+        console.log('User data:', userData);
       }
       else {
         console.log(`Response wasn't okay.`)
@@ -29,7 +30,8 @@ export default function WhoAmIPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button className="m-4 p-2 rounded-lg bg-blue-100 hover:bg-blue-200" type="submit">Fetch</button>
+      <button className="m-4 p-2 rounded-lg bg-blue-100 hover:bg-blue-200" type="submit">
+        Who!?</button>
     </form>
 
   )
