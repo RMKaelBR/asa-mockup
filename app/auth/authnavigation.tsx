@@ -3,7 +3,8 @@ import clsx from 'clsx';
 
 export default function AuthNav ({activePage=''}) {
   return (
-    <div className="flex justify-between w-2/3 2xl:w-5/12 text-3xl">
+    <div className="flex justify-between w-full text-xl xl:text-2xl">
+      <Link href="/" className="hover:bg-yellow-200"><i className="fa-solid fa-house"></i></Link>
       <Link href="/auth/login" className={clsx("hover:bg-yellow-200", activePage === "login" && "text-blue-600")}>Login</Link>
       <Link href="/auth/signup" className={clsx("hover:bg-yellow-200", activePage === "signup" && "text-blue-600")}>SignUp</Link>
       <Link href="/auth/whoami" className={clsx("hover:bg-yellow-200", activePage === "whoami" && "text-blue-600")}>WhoAmI</Link>

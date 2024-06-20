@@ -1,9 +1,9 @@
 import LoginPage from "./login";
-import AuthNav from "../nav";
+import AuthNav from "../authnavigation";
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center m-20">
+    <div className="flex w-full flex-col items-center">
       <AuthNav activePage="login"/>
       <LoginPage />
     </div>

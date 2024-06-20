@@ -1,12 +1,11 @@
-import AuthNav from "../nav";
+import AuthNav from "../authnavigation";
 import FetchUserPage from "./fetchuser";
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center m-20">
+    <div className="flex w-full flex-col items-center">
       <AuthNav activePage="fetchuser"/>
       <FetchUserPage />
     </div>
   );
 }
-  
