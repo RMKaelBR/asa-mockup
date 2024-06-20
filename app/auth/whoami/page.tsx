@@ -14,9 +14,9 @@ export default function Page() {
       <WhoAmIPage />
       <div>
         {user ? (
-          <h3 className="text-lg">You're currently signed in as {user.email}, just so y'know.</h3>
+          <h3 className="text-lg">{`You're currently signed in as ${user.email}, just so y'know.`}</h3>
         ) : (
-          <h3 className="text-lg">You're not currently signed in.</h3>
+          <h3 className="text-lg">{`You're not currently signed in.`}</h3>
         )}
       </div>
     </div>
