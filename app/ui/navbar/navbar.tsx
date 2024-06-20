@@ -59,7 +59,7 @@ export default function NavBar() {
         <div className="hidden lg:flex w-full justify-around font-medium">
           <ul className="navigation-links flex justify-around list-none w-full">
           <NavigationBarLink addressUrl="/" itemTitle="HOME" />
-          <NavigationBarLink addressUrl="/" itemTitle="ABOUT US" />
+          <NavigationBarLink addressUrl="/about/who-we-are" itemTitle="ABOUT US" />
           <NavigationBarLink addressUrl="/" itemTitle="REPORTS" />
           <NavigationBarLink addressUrl="/" itemTitle="CSS PROGRAMS" />
           <NavigationBarLink addressUrl="/" itemTitle="CLIENTS" />
@@ -69,7 +69,7 @@ export default function NavBar() {
           <NavigationBarLink addressUrl="/" itemTitle="CONTACT US" />
           <NavigationBarLink addressUrl="/" itemTitle="PRIVACY NOTICE" /></ul>
         </div>
-        <SignInButton visibilityConditions='hidden lg:block'/>
+        <Link href="/auth/login"><SignInButton visibilityConditions='hidden lg:block'/></Link>
         <button onClick={toggleDropdown} className="lg:hidden"><i className="fa-solid fa-bars text-3xl hover:text-orange-600" /></button>
       </div>
       {navBarIsOpen && <DropdownMenu />}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const PresidentPhoto = () => {
   return (
-    <figure className="mx-4 mb-8 md:w-4/12">
+    <figure className="mx-4 mb-8 md:w-4/12 h-auto">
       <Image src="/pres.jpg" width={500} height={700} alt="The President" className="rounded"/>
       <figcaption>
         <h3 className="md:max-lg:text-2xl text-3xl font-extrabold text-gray-700 mt-4 mb-2">
