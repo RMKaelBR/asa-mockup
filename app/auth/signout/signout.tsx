@@ -1,4 +1,3 @@
-
 'use client'
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/contexts/UserContext";
@@ -9,8 +8,16 @@ export default function SignOutPage() {
   async function onSignOut() {
     await logout();
     router.push('/auth/login');
-    
-    // try{
+  }
+  
+  return (
+    <div className="w-min">
+      <button className="m-4 p-2 w-max rounded-lg bg-blue-100 hover:bg-blue-200" type="submit" onClick={onSignOut}>Sign Out!</button>
+    </div>
+  )
+}
+
+// try{
     //   const response = await fetch(`http://localhost:3000/auth/signout`, {
     //   method: 'POST',
     //   credentials: 'include',
@@ -25,11 +32,3 @@ export default function SignOutPage() {
     // } catch (error) {
     //   console.log("An error occurred during sign out: ", error);
     // }
-  }
-  
-  return (
-    <div className="w-min">
-      <button className="m-4 p-2 w-max rounded-lg bg-blue-100 hover:bg-blue-200" type="submit" onClick={onSignOut}>Sign Out!</button>
-    </div>
-  )
-}

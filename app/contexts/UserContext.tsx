@@ -4,7 +4,7 @@ import { User } from '../types/types'
 
 interface UserContextType {
   user: User | null;
-  login: (email: string, password: string) => Promise<boolean>;
+  login: (email: string, password: string) => Promise<string | null>;
   logout: () => void;
 }
 
@@ -51,10 +51,11 @@ export function UserProvider({ children }: UserProviderProps) {
         const userData: User = await response.json();
         setUser(userData);
         console.log('User logged in with userData: ', userData);
-        return true;
+        return null;
       } else {
-        console.log('Login failed.', await response.json());
-        return false;
+        const errorData = await response.json();
+        console.log('Login failed. ', errorData.message);
+        return errorData.message;
       }
     } catch (error) {
       console.error('Error during login with error: ', error);
