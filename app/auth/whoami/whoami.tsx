@@ -2,12 +2,14 @@
 import { FormEvent } from 'react';
 
 export default function WhoAmIPage() {
+  const urlAddress = "https://asa-mockup-auth.onrender.com/";
+    // const urlAddress = "http://localhost:3000/";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
     try{
-      const response = await fetch('http://localhost:3000/auth/whoami', {
+      const response = await fetch(urlAddress + 'auth/whoami', {
       method: 'GET',
       credentials: 'include'
     })
