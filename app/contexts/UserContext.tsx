@@ -2,8 +2,12 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '../types/types'
 
+// const urlAddress = "https://asa-mockup-auth.onrender.com/";
+const urlAddress = "http://localhost:3000/";
+
 interface UserContextType {
   user: User | null;
+  signup: (email: string, password: string) => Promise<string | null>;
   login: (email: string, password: string) => Promise<string | null>;
   logout: () => void;
 }
@@ -20,7 +24,7 @@ export function UserProvider({ children }: UserProviderProps) {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const response = await fetch('http://localhost:3000/auth/whoami', {
+        const response = await fetch(urlAddress + 'auth/whoami', {
           method: 'GET',
           credentials: 'include',
         });
@@ -38,9 +42,33 @@ export function UserProvider({ children }: UserProviderProps) {
     fetchUser();
   }, []);
 
+  const signup = async ( email: string, password: string ) => {
+    try{
+      const response = await fetch(urlAddress + 'auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    })
+      if (response.ok) {
+        console.log(`yo, response was good.`);
+        console.log(response);
+        return null;
+      }
+      else {
+        console.log(response);
+        const errorData = await response.json();
+        console.log('Login failed. ', errorData.message);
+        return errorData.message;
+        
+      }
+    } catch (error) {
+      console.log("what was that?", error)
+    }
+  }
+
   const login = async ( email: string, password: string) => {
     try {
-      const response = await fetch('http://localhost:3000/auth/signin', {
+      const response = await fetch(urlAddress + 'auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -65,7 +93,7 @@ export function UserProvider({ children }: UserProviderProps) {
 
   const logout = async () => {
     try {
-      const response = await fetch('http://localhost:3000/auth/signout', {
+      const response = await fetch(urlAddress + 'auth/signout', {
         method: 'POST',
         credentials: 'include',
       })
@@ -82,7 +110,7 @@ export function UserProvider({ children }: UserProviderProps) {
   } 
 
   return (
-    <UserContext.Provider value={{user, login, logout}}>
+    <UserContext.Provider value={{user, signup, login, logout}}>
       {children}
     </UserContext.Provider>
   )
@@ -101,5 +129,5 @@ export function useAuth() {
   if (context === undefined) {
     throw new Error('useAuth must be used within a UserProvider');
   }
-  return { login: context.login, logout: context.logout }
+  return { signup: context.signup, login: context.login, logout: context.logout }
 }

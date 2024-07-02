@@ -5,11 +5,13 @@ export default function FetchUserPage() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
+    // const urlAddress = "https://asa-mockup-auth.onrender.com/";
+    const urlAddress = "http://localhost:3000/";
     const formData = new FormData(event.currentTarget);
     const id = formData.get('user_id')
 
     try{
-      const response = await fetch(`http://localhost:3000/auth/${id}`, {
+      const response = await fetch(urlAddress + `auth/${id}`, {
       method: 'GET',
     })
       if (response.ok) {
