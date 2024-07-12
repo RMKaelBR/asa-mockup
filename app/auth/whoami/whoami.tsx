@@ -1,33 +1,13 @@
 'use client'
 import { FormEvent } from 'react';
+import { useAuth } from '@/app/contexts/UserContext';
 
 export default function WhoAmIPage() {
-  const urlAddress = "https://asa-mockup-auth.onrender.com/";
-    // const urlAddress = "http://localhost:3000/";
+  const {whoami} = useAuth();
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-
-    try{
-      const response = await fetch(urlAddress + 'auth/whoami', {
-      method: 'GET',
-      credentials: 'include'
-    })
-      if (response.ok) {
-        console.log(`yo, response was good.`);
-        console.log(response);
-        console.log(response.body);
-        const userData = await response.json();
-        console.log('User data:', userData);
-      }
-      else {
-        console.log(`Response wasn't okay.`)
-        console.log(response)
-      }
-    } catch (error) {
-      console.log("what was that?", error)
-    }
-
+    whoami();
   }
 
   return (

@@ -9,8 +9,7 @@ import CommunitySection from "./ui/homepage/6_CommunitySection";
 import WhatsNewSection from "./ui/homepage/7_WhatsNewSection";
 import IstoryaSection from "./ui/homepage/8_IstoryaSection";
 import PartnersSection from "./ui/homepage/9_PartnersSection";
-import FooterSection from "./ui/homepage/11_FooterSection";
-import CopyrightSection from "./ui/homepage/12_CopyrightSection";
+import FooterSection from "./components/FooterSection";
 
 export default function Home() {
   return (
@@ -37,10 +36,10 @@ export default function Home() {
         <PartnersSection /></section>
       <section className="w-full flex justify-center coverage-section coverage-bg-styling z-10">
         <CoverageSection /></section>
-      <footer className="footer-section w-full bg-gray-800 text-white">
+      <footer className="footer-section w-full">
         <FooterSection /></footer>
-      <section className="copyright-section w-full flex justify-center bg-orange-400 py-2 font-bold">
-        <CopyrightSection /></section>
+      {/* <section className="copyright-section w-full flex justify-center bg-orange-400 py-2 font-bold">
+        <CopyrightSection /></section> */}
     </main>
   );
 }

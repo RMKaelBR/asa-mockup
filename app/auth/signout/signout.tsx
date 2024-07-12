@@ -6,7 +6,7 @@ export default function SignOutPage() {
   const router = useRouter();
   const { logout } = useAuth();
   async function onSignOut() {
-    await logout();
+    logout();
     router.push('/auth/login');
   }
   
@@ -16,19 +16,3 @@ export default function SignOutPage() {
     </div>
   )
 }
-
-// try{
-    //   const response = await fetch(`http://localhost:3000/auth/signout`, {
-    //   method: 'POST',
-    //   credentials: 'include',
-    // })
-    //   if (response.ok) {
-    //     console.log(response);
-    //     router.push('/');
-    //   }
-    //   else {
-    //     console.error('Failed to sign out', await response.json());
-    //   }
-    // } catch (error) {
-    //   console.log("An error occurred during sign out: ", error);
-    // }

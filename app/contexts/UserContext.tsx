@@ -2,14 +2,18 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '../types/types'
 
-const urlAddress = "https://asa-mockup-auth.onrender.com/";
+const urlAddress = process.env.NEXT_PUBLIC_API_URL;
+// const urlAddress = "https://asa-mockup-auth.onrender.com/";
 // const urlAddress = "http://localhost:3000/";
+console.log(urlAddress)
 
 interface UserContextType {
   user: User | null;
   signup: (email: string, password: string) => Promise<string | null>;
   login: (email: string, password: string) => Promise<string | null>;
   logout: () => void;
+  whoami: () => void;
+  fetchUser: (id: string) => void;
 }
 
 interface UserProviderProps {
@@ -107,10 +111,53 @@ export function UserProvider({ children }: UserProviderProps) {
     } catch (error) {
       console.error('Error during logout with error: ', error);
     }
-  } 
+  }
+
+  const whoami = async () => {
+    try{
+      const response = await fetch(urlAddress + 'auth/whoami', {
+      method: 'GET',
+      credentials: 'include'
+    })
+      if (response.ok) {
+        console.log(response);
+        console.log(response.body);
+        const userData = await response.json();
+        console.log('User data:', userData);
+      }
+      else {
+        console.log(`Response wasn't okay.`)
+        console.log(response)
+      }
+    } catch (error) {
+      console.log("what was that?", error)
+    }
+  }
+
+  const fetchUser = async (id: string) => {
+    try {
+      const response = await fetch(urlAddress + `auth/${id}`, {
+        method: 'GET',
+        credentials: 'include'
+      })
+      if (response.ok) {
+        console.log(response);
+        const userData = await response.json();
+        console.log('User data:', userData);
+      }
+      else {
+        console.log(response)
+        const jsonResponse = await response.json();
+        console.log(jsonResponse)
+      }
+    }
+    catch (error) {
+      console.log ("Error fetching user: ", error);
+    }
+  }
 
   return (
-    <UserContext.Provider value={{user, signup, login, logout}}>
+    <UserContext.Provider value={{user, signup, login, logout, whoami, fetchUser}}>
       {children}
     </UserContext.Provider>
   )
@@ -129,5 +176,11 @@ export function useAuth() {
   if (context === undefined) {
     throw new Error('useAuth must be used within a UserProvider');
   }
-  return { signup: context.signup, login: context.login, logout: context.logout }
+  return { 
+    signup: context.signup, 
+    login: context.login, 
+    logout: context.logout, 
+    whoami: context.whoami,
+    fetchUser: context.fetchUser
+  }
 }

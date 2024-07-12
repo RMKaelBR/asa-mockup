@@ -1,32 +1,16 @@
 'use client'
 import { FormEvent } from 'react';
+import { useAuth } from '@/app/contexts/UserContext';
 
 export default function FetchUserPage() {
+  const {fetchUser} = useAuth();
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    const urlAddress = "https://asa-mockup-auth.onrender.com/";
-    // const urlAddress = "http://localhost:3000/";
     const formData = new FormData(event.currentTarget);
     const id = formData.get('user_id')
-
-    try{
-      const response = await fetch(urlAddress + `auth/${id}`, {
-      method: 'GET',
-      credentials: 'include',
-    })
-      if (response.ok) {
-        console.log(response);
-        const userData = await response.json();
-        console.log('User data:', userData);
-      }
-      else {
-        console.log(response)
-        const jsonResponse = await response.json();
-        console.log(jsonResponse)
-      }
-    } catch (error) {
-      console.log("what was that?", error)
+    if (typeof(id)==='string') {
+      fetchUser(id)
     }
   }
 
